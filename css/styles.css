@@ -13,7 +13,9 @@ a{
     text-decoration: none;
 }
 img{
+    display: block;
     max-width: 100%;
+    border-radius: 5px;
 }
 /* Grid Geral */
 
@@ -61,18 +63,78 @@ img{
     background: rgba(0, 0, 0, .5);
 }
 
+/* Sidenav */
+
 .sidenav {
     grid-area: sidenav;
+    background: #fafbfc;
+    padding: 30px;
 }
+
+.sidenav li a {
+    display: block;
+    min-width: 60px;
+    max-width: 100px;
+    margin: 0 auto 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0 rgb(44, 44, 44, 0.15);
+    transition: 1s ease-out;
+}
+
+.sidenav li a:hover {
+    background: #B07BFB;
+
+}
+
+/* Content */
 
 .content {
     grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
 }
+
+.col-wide {
+    grid-column: 1 / -1;
+}
+
+.image-1 {
+    grid-row: span 2;
+    align-self: end;
+}
+
+.image-2 {
+    align-self: end;
+}
+/* Anúncios */
 
 .anuncios {
     grid-area: anuncios;
+    background: #fafbfc;
+    display: grid;
+    align-content: start;
+    padding: 30px;
+    gap: 30px;
+
 }
+
+/* Footer */
 
 .footer {
     grid-area: footer;
+    background: linear-gradient(135deg, #8844ee, #B07BFB);
 }
+
+.footer p {
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
